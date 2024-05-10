@@ -32,15 +32,17 @@ ax.set_xlabel("Время, с", fontweight="bold")
 ax.set_ylabel("Напряжение, В", fontweight="bold")
 ax.set_title("Процесс заряда и разряда конденсатора в RC-цепочке", fontweight="bold")
 
-my_plot = plt.plot(xs, ys, color='m', label="U(t)",marker = 'o',markevery=10)
+my_plot = plt.plot(xs, ys, color='c', label="Зависимость напряжения от врмени U(t)",marker = 'o',
+                           markerfacecolor='tab:pink',
+                           markeredgecolor='m', markevery=10)
 
 ax.xaxis.set_major_locator(ticker.MaxNLocator(10))
 ax.xaxis.set_minor_locator(ticker.MaxNLocator(10))
 ax.yaxis.set_major_locator(ticker.MaxNLocator(10))
 ax.yaxis.set_minor_locator(ticker.MaxNLocator(10))
 
-plt.grid(color="blue", visible=True, which='major',axis='both',alpha=1, linestyle = ":")
-plt.grid(color="blue", visible=True, which='minor',axis='both',alpha=1, linestyle = ":")
+plt.grid(color="pink", visible=True, which='major',axis='both',alpha=1, linestyle = ":")
+plt.grid(color="pink", visible=True, which='minor',axis='both',alpha=1, linestyle = ":")
 
 plt.legend()
 plt.show()
